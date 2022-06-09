@@ -1,0 +1,10 @@
+/node_modules
+package-lock.json
+/admin
+*.pem
+.eslintcache
+.env
+
+*.pdf
+/client/public/articles
+/client/public/volumes

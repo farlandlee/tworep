@@ -1,0 +1,182 @@
+[
+    {
+        "volume": "Volume 1 - Joe-Chicago 1958-1961",
+        "volume_number": "1",
+        "filename": "volume1.pdf"
+    },
+    {
+        "volume": "Volume 2 - Marcia-Connecticut - 1969-70",
+        "volume_number": "2",
+        "filename": "volume2.pdf"
+    },
+    {
+        "volume": "Volume 3 - Joe -Newsday-Washington - 1962-1971",
+        "volume_number": "3",
+        "filename": "volume3.pdf"
+    },
+    {
+        "volume": "Volume 4-A - Marcia-Alabama - May 1971 - March 1974",
+        "volume_number": "4.1",
+        "filename": "volume4A.pdf"
+    },
+    {
+        "volume": "Volume 4-B - Marcia-Alabama - April 1974 - March 1975",
+        "volume_number": "4.2",
+        "filename": "volume4B.pdf"
+    },
+    {
+        "volume": "Volume 4-C - Marcia-Alabama - March 1975-March 1976",
+        "volume_number": "4.3",
+        "filename": "volume4C.pdf"
+    },
+    {
+        "volume": "Volume 4-D - Marcia-Alabama - March 1976-January 1977",
+        "volume_number": "4.4",
+        "filename": "volume4D.pdf"
+    },
+    {
+        "volume": "Volume 5 - Joe-Washington - 1972-76",
+        "volume_number": "5",
+        "filename": "volume5.pdf"
+    },
+    {
+        "volume": "Volume 6 - Marcia-Atlanta - 1977-79",
+        "volume_number": "6",
+        "filename": "volume6.pdf"
+    },
+    {
+        "volume": "Volume 7 - Marcia-Atlanta - 1980-82",
+        "volume_number": "7",
+        "filename": "volume7.pdf"
+    },
+    {
+        "volume": "Volume 8 - Joe - Cox-DC - 1976-78",
+        "volume_number": "8",
+        "filename": "volume8.pdf"
+    },
+    {
+        "volume": "Volume 9 - Joe - Cox-DC - 1980-82",
+        "volume_number": "9",
+        "filename": "volume9.pdf"
+    },
+    {
+        "volume": "Volume 10 - Joe - Cox-DC - 1981-82",
+        "volume_number": "10",
+        "filename": "volume10.pdf"
+    },
+    {
+        "volume": "Volume 11 - Marcia-Abroad - 1983-June 24, 1985",
+        "volume_number": "11",
+        "filename": "volume11.pdf"
+    },
+    {
+        "volume": "Volume 12 - Marcia-Abroad - June 25, 1985-1987",
+        "volume_number": "12",
+        "filename": "volume12.pdf"
+    },
+    {
+        "volume": "Volume 13 - Joe-Abroad - 1983",
+        "volume_number": "13",
+        "filename": "volume13.pdf"
+    },
+    {
+        "volume": "Volume 14 - Joe-Abroad - 1984",
+        "volume_number": "14",
+        "filename": "volume14.pdf"
+    },
+    {
+        "volume": "Volume 15 - Joe-Abroad - 1985",
+        "volume_number": "15",
+        "filename": "volume15.pdf"
+    },
+    {
+        "volume": "Volume 16 - Joe-Abroad - 1986-1987",
+        "volume_number": "16",
+        "filename": "volume16.pdf"
+    },
+    {
+        "volume": "Volume 17 - Joe-Marcia - Home + Abroad - 1988-1989",
+        "volume_number": "17",
+        "filename": "volume17.pdf"
+    },
+    {
+        "volume": "Volume 18 - Joe-Marcia - Home + Abroad - January-August 1990",
+        "volume_number": "18",
+        "filename": "volume18.pdf"
+    },
+    {
+        "volume": "Volume 19 - Joe-Marcia - Gulf War Part 1 - August-October 1990",
+        "volume_number": "19",
+        "filename": "volume19.pdf"
+    },
+    {
+        "volume": "Volume 20 - Joe-Marcia - Gulf War Part 2 - November 1990-March 1991",
+        "volume_number": "20",
+        "filename": "volume20.pdf"
+    },
+    {
+        "volume": "Volume 21 - Joe-Marcia - Iraq Post-War - March-November 1991",
+        "volume_number": "21",
+        "filename": "volume21.pdf"
+    },
+    {
+        "volume": "Volume 22 - Joe-Marcia - Moscow-Baghdad-D.C. - December 1991-March 1992",
+        "volume_number": "22",
+        "filename": "volume22.pdf"
+    },
+    {
+        "volume": "Volume 23 - Joe-Marcia - D.C.-Kuwait  - April-July 1992",
+        "volume_number": "23",
+        "filename": "volume23.pdf"
+    },
+    {
+        "volume": "Volume 24 - Joe-Marcia - Kuwait-Baghdad-D.C. - August-December 1992",
+        "volume_number": "24",
+        "filename": "volume24.pdf"
+    },
+    {
+        "volume": "Volume 25 - Joe-Marcia  -  Moscow Bureau - July 1993-February 1994",
+        "volume_number": "25",
+        "filename": "volume25.pdf"
+    },
+    {
+        "volume": "Volume 26 - Joe-Marcia  -  St. Petersburg-Chechnya - March 1994-February 1995",
+        "volume_number": "26",
+        "filename": "volume26.pdf"
+    },
+    {
+        "volume": "Volume 27 - Joe-Marcia  -  Moscow-Kazakhstan-Chechnya - March-December 1995",
+        "volume_number": "27",
+        "filename": "volume27.pdf"
+    },
+    {
+        "volume": "Volume 28 - Joe-Marcia  - Russia-Chechnya  -  1996",
+        "volume_number": "28",
+        "filename": "volume28.pdf"
+    },
+    {
+        "volume": "Volume 29 - Joe-Marcia  - Russia-\"Bombshell\"  -  1997-2015",
+        "volume_number": "29",
+        "filename": "volume29.pdf"
+    },
+    {
+        "volume": "Volume 30 - Joe-Marcia  - Asia Bureau  - April-October 1998",
+        "volume_number": "30",
+        "filename": "volume30.pdf"
+    },
+    {
+        "volume": "Volume 31 - Joe-Marcia  - China-Kosovo  - October 1998-May 1999",
+        "volume_number": "31",
+        "filename": "volume31.pdf"
+    },
+    {
+        "volume": "Volume 32  - Joe-Marcia  - Kosovo-China-Home  - May 1999-January 2000",
+        "volume_number": "32",
+        "filename": "volume32.pdf"
+    },
+    {
+        "volume": "Volume 33 - Joe-Marcia - Index 1958-2000",
+        "volume_number": "33",
+        "filename": "volume33.pdf"
+    }
+]
