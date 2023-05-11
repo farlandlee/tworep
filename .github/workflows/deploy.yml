@@ -1,0 +1,42 @@
+name: Deploy to AWS Lightsail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js on runner
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: Install dependencies and build client
+      run: |
+        cd client
+        npm ci
+        npm run build
+
+    - name: Install server dependencies
+      run: |
+        cd server
+        npm ci
+
+    - name: Deploy to AWS Lightsail
+      env:
+        PRIVATE_KEY: ${{ secrets.LIGHTSAIL_PRIVATE_KEY }}
+        HOST: ${{ secrets.LIGHTSAIL_HOST }}
+        USER: ${{ secrets.LIGHTSAIL_USER }}
+      run: |
+        echo "$PRIVATE_KEY" > private_key.pem
+        chmod 600 private_key.pem
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/server
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/client/build
+        rm -f private_key.pem
