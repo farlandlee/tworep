@@ -34,9 +34,13 @@ jobs:
         PRIVATE_KEY: ${{ secrets.LIGHTSAIL_PRIVATE_KEY }}
         HOST: ${{ secrets.LIGHTSAIL_HOST }}
         USER: ${{ secrets.LIGHTSAIL_USER }}
+        SERVER_ENV: ${{ secrets.SERVER_ENV }}
+        CLIENT_ENV: ${{ secrets.CLIENT_ENV }}
       run: |
         echo "$PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem
+        echo "$SERVER_ENV" > server/.env
+        echo "$CLIENT_ENV" > client/.env
         rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/home/bitnami/server
         rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/home/bitnami/client/build
         rm -f private_key.pem
