@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js on runner
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: 16
 
@@ -37,6 +37,6 @@ jobs:
       run: |
         echo "$PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem
-        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/server
-        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/client/build
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/home/bitnami/server
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/home/bitnami/client/build
         rm -f private_key.pem
