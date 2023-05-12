@@ -6,6 +6,7 @@ import ViewPDF from './ViewPDF';
 import {Helmet} from "react-helmet-async"
 
 const Article = (props) => {
+    const origin = window.location.origin
     const { id } = useParams();
     const [article, setArticle] = useState([])
     const [file, setFile] = useState('')
@@ -14,7 +15,7 @@ const Article = (props) => {
     useEffect(() => {
         api.getArticleById(id)
         .then((result) => {
-           let article = result.data.article;
+            let article = result.data.article;
             setArticle(article)
             let vol = parseInt(article.volume_number.$numberDecimal * 10)/10
             setFile(encodeURI(`${origin}/articles/volume_${vol}/${article.url}`))

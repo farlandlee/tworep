@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "deploy": "rsync -av -e ssh --exclude={'.DS_Store','node_modules','image_processing'} /Users/matthewlee/Sites/tworeporters.com/server/* tworeporters:/home/bitnami/tworeporters.com/server"
   },
   "author": "",
   "license": "ISC",
