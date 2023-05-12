@@ -8,14 +8,11 @@ import {
     Input,
     Button,
     InputGroup,
-    InputGroupAddon,
     InputGroupText
 } from 'reactstrap'
-import { SlideDown } from 'react-slidedown'
-import 'react-slidedown/lib/slidedown.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/pro-regular-svg-icons'
-import { faSearch } from '@fortawesome/pro-solid-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux'
 import { searchArticles } from '../actions/searchAction'
 import api from '../api'
@@ -80,13 +77,11 @@ const SearchBar = (props) => {
             <Col xs md="12">
                 <Form id="search-form">
                     <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                                <FontAwesomeIcon icon={faSearch} size="lg" color="#0069d9" />
-                            </InputGroupText>
-                        </InputGroupAddon>
+                        <InputGroupText>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" color="#0069d9" />
+                        </InputGroupText>
                         <Input type="search" name="includes" placeholder="Search includes these words or phrases" className="form-control-lg semi-transparent" onChange={handleChange} value={terms.includes || ''} />
-                        <InputGroupAddon addonType="append">
+                        <InputGroupText>
                             <Button 
                                 color="primary" 
                                 type="submit"
@@ -94,16 +89,16 @@ const SearchBar = (props) => {
                             >
                                 Submit
                             </Button>
-                        </InputGroupAddon>
-                        <InputGroupAddon addonType="append">
+                        </InputGroupText>
+                        <InputGroupText>
                             <Button 
                                 color="danger" 
                                 type="submit"
                                 onClick={clearForm}
                             >
-                                Clear
+                            Clear
                             </Button>
-                        </InputGroupAddon>
+                        </InputGroupText>
                     </InputGroup>
                     <FormGroup className={classes}>
                         <Button
@@ -115,7 +110,7 @@ const SearchBar = (props) => {
                             more options
                             <FontAwesomeIcon icon={faAngleDown} size="lg" color="#ffffff" />
                         </Button>
-                        <SlideDown className="full-width px-4 py-3 text-left advanced-search-slidedown" closed={closed} >
+                        <div className={`full-width px-4 my-3 text-left advanced-search-slidedown${closed? '' : ' open'}`}>
                             <FormGroup row>
                                 <Col sm="12">
                                     Date Range
@@ -193,7 +188,7 @@ const SearchBar = (props) => {
                                     </Button>
                                 </Col>
                             </FormGroup>
-                        </SlideDown>
+                        </div>
                     </FormGroup>
                 </Form>
             </Col>

@@ -1,6 +1,3 @@
-body {
-    // background-color: #B7764C;
-}
 .navbar-nav {
     &.navbar-right {
         width: 100%;
@@ -13,8 +10,11 @@ body {
     font-style: normal;
     font-size: 40px;
 }
-.navbar.bg-brown {
-    background-color: #b7764b;
+.navbar {
+    padding: 20px 20px 10px;
+    &.bg-brown {
+        background-color: #b7764b;
+    }
 }
 .main-nav {
     font-size: 18px;

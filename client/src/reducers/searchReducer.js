@@ -20,7 +20,7 @@ const initialState = {
     error: false
 }
 
-export default (state = initialState, action) => {
+const searchReducer = (state = initialState, action) => {
     switch(action.type) {
         case GET_SEARCH_TERMS:
             return {
@@ -54,3 +54,5 @@ export default (state = initialState, action) => {
             return state
     }
 }
+
+export default searchReducer

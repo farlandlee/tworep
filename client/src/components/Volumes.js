@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import api from '../api'
-import MetaTags from 'react-meta-tags'
+import {Helmet} from "react-helmet-async"
 
 const Volumes = (props) => {
     const [volumes, setVolumes] = useState([])
@@ -19,10 +19,10 @@ const Volumes = (props) => {
 
     return (
         <div className="container">
-            <MetaTags>
+            <Helmet>
                 <title>Volumes | newspaper clippings grouped by timeframe | PRINT | tworeporters.com</title>
                 <meta name="description" content="View PDF archives of the newspaper clippings written by Joe Albright and Marcia Kunstel.  The volumes represent significant periods within the reporting careers of the award-winning journalists." />
-            </MetaTags>
+            </Helmet>
             <h2 className="page-title">Volumes</h2>
             <div className="page-intro">
                 Please click on the volume you would like to open in PDF form.  Please note that due to the large size of the Volumes, it takes a few seconds for them to load.

@@ -1,14 +1,14 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import Articles from "./Articles";
-import MetaTags from 'react-meta-tags'
+import {Helmet} from "react-helmet-async"
 
 const Search = () => (
     <div className="container">
-        <MetaTags>
+        <Helmet>
             <title>Search Articles | search newspaper articles by Joe Albright and Marcia Kunstel | PRINT | tworeporters.com</title>
             <meta name="description" content="Over 3000 newspaper articles have been scanned and indexed to create a searchable database of the lifework of Marcia Kunstel and Joe Albright.  Articles can be found by headline, OCR versions of the copy, author, Volume and publication." />
-        </MetaTags>
+        </Helmet>
         <h2 className="page-title">Search Articles</h2>
         <div className="page-intro">
             <p>Type in the words or phrases you would like to find in the search form.  To search for a name or exact phrase, enclose it in double quotes (i.e., "Nelson Mandela").</p>

@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import ReCAPTCHA from "react-google-recaptcha"
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/pro-duotone-svg-icons'
-import {ReactTitle} from 'react-meta-tags'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import {Helmet} from "react-helmet-async"
 const baseURL = process.env.NODE_ENV === 'production'? 'https://api.tworeporters.com/send/' : 'http://localhost:3000/send/'
 
 const Contact = (props) => {
@@ -93,7 +93,10 @@ const Contact = (props) => {
     
     return (
         <div className="container contact-us">
-            <ReactTitle title="Contact Us | contact journalists Joe Albright and Marcia Kunstel | PRINT | tworeporters.com"/>
+            <Helmet>
+                <title>Contact Us | contact journalists Joe Albright and Marcia Kunstel | PRINT | tworeporters.com</title>
+                <meta name="description" content="Get in touch with journalists Joe Albright & Marcia Kunstel" />
+            </Helmet>
             <h2 className="page-title">{props.title}</h2>
             <div className="page-intro">
                 Joe Albright and Marcia Kunstel ask researchers and others to notify us using the form below when any article in this archive is citied or reproduced in another document or publication.

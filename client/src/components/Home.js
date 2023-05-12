@@ -7,15 +7,15 @@ import {
     Button
 } from 'reactstrap'
 import cover from '../images/cover.jpg'
-import MetaTags from 'react-meta-tags'
+import {Helmet} from "react-helmet-async"
 
 const Home = () => (
     <div className="background-container">
-        <MetaTags>
+        <Helmet>
             <title>PRINT | newspaper article archive by Joe Albright and Marcia Kunstel | tworeporters.com</title>
             <meta name="description" content="This is an archive of newspaper articles by Joe Albright and Marcia Kunstel spanning over 4 decades from 1958 to 2000." />
             <meta name="keywords" content="Marcia Kunstel, Joe Albright, Joseph Albright, Nixon, Kennedy,Johnson, Reagan, Ford, Bush, Carter, Clinton, Wallace, Nunn, Chicago,Hartford, Savannah River, Nuclear, Chad, Libya, Egypt, Jordan, Israel,Lebanon, Beirut, Saudi Arabia, Iraq, Kuwait, Desert Shield, Desert Storm,Mandela, South Africa, apartheid, Berlin wall, Greenham Common, TheodoreHall, Ted Hall, Los Alamos, Morris Cohen, Lona Cohen, Bombshell, nuclearspy, Three Mile Island, China, Moscow, Yeltsin, Siberian Tiger, Norilsk,Ceaucescu, Atlanta, Georgia, Montgomery, Alabama, Robert Vance, MorrisDees, Judge Frank Johnson, Richard Shelby, Maynard Jackson, John Lewis,Reidsville, Oppenheimer, Teller, atomic bomb, Klerk, Zemin, CorazonAquino, Ferdinand Marcos"/>
-        </MetaTags>
+        </Helmet>
         <Container className="home-container">
             <div className="home-intro">
                 <h2>You've Opened PRINT</h2>

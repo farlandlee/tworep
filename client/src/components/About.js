@@ -2,14 +2,14 @@ import React from 'react';
 import jm_97 from '../images/Joe-and-Marcia-in-Moscow-subway(1997).jpg';
 import jm_83 from '../images/Joe-and-Maria-in-disguise-inside-Afghanistan-(1983).jpg';
 import jm_83_2 from '../images/Joe-and-Marcia-on-the-way-across-the-Afghan-border-into-Pakistan-(1983).jpg';
-import MetaTags from 'react-meta-tags'
+import {Helmet} from "react-helmet-async"
 
 const About = (props) => (
     <div className="container about-us">
-        <MetaTags>
+        <Helmet>
             <title>What is PRINT? | the lifework of journalists Joe Albright and Marcia Kunstel | tworeporters.com</title>
             <meta name="description" content="PRINT is the lifework of award-winning Cox Newspapers journalists Marcia Kunstel and Joe Albright spanning from 1958-2000 and chronicling the major news events at that define our world today." />
-        </MetaTags>
+        </Helmet>
         <h2 className="page-title">What is PRINT?</h2>
         <div className="about-us-container text-justify">
             <p className="clearfix"><img className="inline-image d-block float-md-right img-thumbnail" src={jm_83} alt="Joe and Maria in disguise inside Afghanistan (1983)" />You’ve opened a collection of newspaper articles by Joe Albright and Marcia Kunstel, written back in the days when newspapers were flush with the motivation – and the revenue -- to tell the story like it was, wherever it was. And readers were hungry to know news. It covers the years 1958 to 2000, spanning two careers that started miles apart and ended up merged in some of Earth’s most beautiful, most deadly and most consequential locations.</p>

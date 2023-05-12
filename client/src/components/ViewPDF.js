@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faChevronLeft,
   faChevronRight 
-} from '@fortawesome/pro-duotone-svg-icons'
+} from '@fortawesome/free-solid-svg-icons'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 export default function ViewPDF(props) {
   const [numPages, setNumPages] = useState(null);

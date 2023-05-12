@@ -1,5 +1,5 @@
 /node_modules
-/admin
+/client-old
 *.pem
 .eslintcache
 .env
