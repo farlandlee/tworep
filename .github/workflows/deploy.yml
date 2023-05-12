@@ -17,27 +17,17 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-      
-    - name: Cache node modules
-      uses: actions/cache@v3
-      with:
-        path: |
-          **/node_modules
-          ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
 
     - name: Install dependencies and build client
       run: |
         cd client
-        npm ci
+        npm ci --force
         npm run build
 
     - name: Install server dependencies
       run: |
         cd server
-        npm ci
+        npm ci --force
 
     - name: Deploy to AWS Lightsail
       env:
