@@ -17,6 +17,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
+      
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: |
+          **/node_modules
+          ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies and build client
       run: |
@@ -44,3 +54,4 @@ jobs:
         rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/home/bitnami/tworeporters.com/server
         rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/home/bitnami/tworeporters.com/client/build
         rm -f private_key.pem
+
