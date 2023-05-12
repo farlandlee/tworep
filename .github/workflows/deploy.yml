@@ -21,13 +21,13 @@ jobs:
     - name: Install dependencies and build client
       run: |
         cd client
-        npm ci --force
+        npm install
         npm run build
 
     - name: Install server dependencies
       run: |
         cd server
-        npm ci --force
+        npm install
 
     - name: Deploy to AWS Lightsail
       env:
