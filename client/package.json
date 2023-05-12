@@ -28,9 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "rsync -av -e ssh --exclude={'*.xlsx','*.pdf','.DS_Store','articles','volumes'} /Users/matthewlee/Sites/tworeporters.com/client/build/* tworeporters:/var/www/TwoReporters/client/build",
-    "articles": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Dropbox/tworeportersdotcom/articles-ready-for-site/ tworeporters:/var/www/TwoReporters/client/build/articles",
-    "volumes": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Dropbox/tworeportersdotcom/volume-pdfs/ tworeporters:/var/www/TwoReporters/client/build/volume-pdfs"
+    "deploy": "rsync -av -e ssh --exclude={'*.xlsx','*.pdf','.DS_Store','articles','volumes'} /Users/matthewlee/Sites/tworeporters.com/client/build/* tworeporters:/home/bitnami/tworeporters.com/client/build",
+    "articles": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/articles-ready-for-site/ tworeporters:/home/bitnami/tworeporters.com/client/build/articles",
+    "volumes": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/volume-pdfs/ tworeporters:/home/bitnami/tworeporters.com/client/build/volume-pdfs"
   },
   "eslintConfig": {
     "extends": [

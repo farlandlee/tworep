@@ -41,6 +41,6 @@ jobs:
         chmod 600 private_key.pem
         echo "$SERVER_ENV" > server/.env
         echo "$CLIENT_ENV" > client/.env
-        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/home/bitnami/server
-        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/home/bitnami/client/build
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude={'node_modules','*.log'} ./server/ $USER@$HOST:/home/bitnami/tworeporters.com/server
+        rsync -avzr --delete -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" ./client/build/ $USER@$HOST:/home/bitnami/tworeporters.com/client/build
         rm -f private_key.pem
