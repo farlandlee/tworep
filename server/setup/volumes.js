@@ -15,11 +15,13 @@ Volume.deleteMany({})
     Volume.insertMany(
         volumes
     ).then(function(result){ 
-        console.log('added')  // Success 
+        console.log('added ',result.length)  // Success 
     }).catch(function(error){ 
         console.log(error)      // Failure 
     })
 }).catch(function(error){ 
     console.log(error)      // Failure 
-})
+}).finally(function() {
+    mongoose.connection.close()
+});
 
