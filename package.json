@@ -7,7 +7,12 @@
     "server": "cd server && npm start",
     "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
     "start": "npm run build && npm run server",
-    "build": "cd client && npm install && npm run build && cd ../server && npm install"
+    "build": "cd client && npm install && npm run build && cd ../server && npm install",
+    "client:deploy": "npm --prefix ./client run deploy",
+    "client:build-deploy": "npm --prefix ./client run build-deploy",
+    "articles": "npm --prefix ./client run articles",
+    "volumes": "npm --prefix ./client run volumes",
+    "server:deploy": "npm --prefix ./server run deploy"
   },
   "dependencies": {
     "concurrently": "^8.0.1"

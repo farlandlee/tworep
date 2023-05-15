@@ -29,6 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "rsync -av -e ssh --exclude={'*.xlsx','*.pdf','.DS_Store','articles','volumes'} /Users/matthewlee/Sites/tworeporters.com/client/build/* tworeporters:/home/bitnami/tworeporters.com/client/build",
+    "build-deploy": "npm run build && npm run deploy",
     "articles": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/articles/ tworeporters:/home/bitnami/tworeporters.com/client/build/articles",
     "volumes": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/volume-pdfs/ tworeporters:/home/bitnami/tworeporters.com/client/build/volume-pdfs"
   },

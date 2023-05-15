@@ -6,7 +6,7 @@ import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import {Helmet} from "react-helmet-async"
-const baseURL = process.env.NODE_ENV === 'production'? 'https://api.tworeporters.com/send/' : 'http://localhost:3000/send/'
+const baseURL = process.env.NODE_ENV === 'production'? '/send/' : 'http://localhost:3000/send/'
 
 const Contact = (props) => {
     const [data, setData] = useState({

@@ -19,3 +19,20 @@ to set up:
 todo: use next.js or gatsby.js to make site better for SEO.
 todo: add admin side to allow articles to be managed.
 
+On the Production Server:
+
+To check the status of the app:
+`sudo systemctl status tworeporters`
+to start the app:
+`sudo systemctl start tworeporters`
+to restart the app:
+`sudo systemctl restart tworeporters`
+to stop the app:
+`sudo systemctl stop tworeporters`
+
+to deploy to the server:
+`npm run client:build-deploy`
+`npm run server:deploy`
+
+will build and deploy the react app and deploy the server respectively.
+
