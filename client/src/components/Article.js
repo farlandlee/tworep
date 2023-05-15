@@ -25,7 +25,7 @@ const Article = (props) => {
         .catch(error => {
             console.error('Error retrieving article', error)
         })
-    }, [id])
+    }, [id, origin])
 
     return (
         <div className="container">
