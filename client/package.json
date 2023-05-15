@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -29,8 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "rsync -av -e ssh --exclude={'*.xlsx','*.pdf','.DS_Store','articles','volumes'} /Users/matthewlee/Sites/tworeporters.com/client/build/* tworeporters:/home/bitnami/tworeporters.com/client/build",
-    "articles": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/articles/ tworeporters:/home/bitnami/tworeporters.com/client/public/articles",
-    "volumes": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/volume-pdfs/ tworeporters:/home/bitnami/tworeporters.com/client/public/volume-pdfs"
+    "articles": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/articles/ tworeporters:/home/bitnami/tworeporters.com/client/build/articles",
+    "volumes": "rsync -ami --include='*.pdf' --include='*/' --exclude='*' /Users/matthewlee/Sites/tworeporters.com/client/public/volume-pdfs/ tworeporters:/home/bitnami/tworeporters.com/client/build/volume-pdfs"
   },
   "eslintConfig": {
     "extends": [
